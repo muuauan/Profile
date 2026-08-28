@@ -1,0 +1,4200 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- =========================
+       BASIC SEO
+  ========================= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Portfolio ของนักเรียนชั้น ม.3 ผู้สนใจศึกษาต่อด้านเตรียมวิศวกรรมศาสตร์และวิศวกรรมโยธา"
+  >
+
+  <meta name="theme-color" content="#4A2C20">
+
+  <title>[ชื่อ-นามสกุล] | Future Civil Engineer</title>
+
+
+  <!-- =========================
+       GOOGLE FONT
+  ========================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =========================
+       TAILWIND CSS
+  ========================= -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          colors: {
+
+            chocolate: "#4A2C20",
+            "chocolate-dark": "#321C14",
+            "chocolate-light": "#6B4030",
+
+            caramel: "#B7791F",
+
+            yellow: "#F6D77A",
+            "yellow-light": "#FFF3BF",
+            "yellow-pale": "#FFF9E6",
+
+            cream: "#FFFDF5",
+
+            beige: "#F4E8D1",
+
+            brown: "#8B5E3C",
+
+          },
+
+          fontFamily: {
+            thai: ["Noto Sans Thai", "sans-serif"]
+          },
+
+          boxShadow: {
+            soft:
+              "0 20px 50px rgba(74, 44, 32, 0.10)",
+
+            chocolate:
+              "0 15px 40px rgba(74, 44, 32, 0.18)"
+          }
+
+        }
+      }
+    };
+  </script>
+
+
+  <!-- =========================
+       CUSTOM CSS
+  ========================= -->
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Sans Thai", sans-serif;
+      background: #fffdf5;
+      color: #4a2c20;
+      overflow-x: hidden;
+    }
+
+
+    /* =========================
+       TEXT SELECTION
+    ========================= */
+
+    ::selection {
+      background: #f6d77a;
+      color: #4a2c20;
+    }
+
+
+    /* =========================
+       ENGINEERING GRID
+    ========================= */
+
+    .engineering-grid {
+
+      background-image:
+
+        linear-gradient(
+          rgba(74, 44, 32, 0.055) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(74, 44, 32, 0.055) 1px,
+          transparent 1px
+        );
+
+      background-size: 35px 35px;
+    }
+
+
+    /* =========================
+       HERO DECORATION
+    ========================= */
+
+    .hero-pattern {
+
+      background-image:
+
+        linear-gradient(
+          135deg,
+          transparent 45%,
+          rgba(255,255,255,0.3) 46%,
+          rgba(255,255,255,0.3) 54%,
+          transparent 55%
+        );
+
+      background-size: 70px 70px;
+    }
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform: translateY(30px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.active {
+
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =========================
+       SKILL BAR
+    ========================= */
+
+    .skill-bar {
+
+      transform: scaleX(0);
+
+      transform-origin: left;
+
+      transition:
+        transform 1.2s ease;
+    }
+
+    .skill-bar.active {
+
+      transform: scaleX(1);
+    }
+
+
+    /* =========================
+       PROJECT CARD
+    ========================= */
+
+    .project-card {
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    }
+
+    .project-card:hover {
+
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 20px 45px rgba(74,44,32,0.13);
+
+      border-color: #f6d77a;
+    }
+
+    .project-card img {
+
+      transition:
+        transform 0.5s ease;
+    }
+
+    .project-card:hover img {
+
+      transform: scale(1.05);
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar-scrolled {
+
+      background:
+        rgba(255, 253, 245, 0.95) !important;
+
+      backdrop-filter: blur(15px);
+
+      box-shadow:
+        0 5px 25px rgba(74,44,32,0.08);
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    .mobile-menu {
+
+      max-height: 0;
+
+      overflow: hidden;
+
+      opacity: 0;
+
+      transition:
+        max-height 0.35s ease,
+        opacity 0.3s ease;
+    }
+
+    .mobile-menu.open {
+
+      max-height: 500px;
+
+      opacity: 1;
+    }
+
+
+    /* =========================
+       FLOATING ANIMATION
+    ========================= */
+
+    .float {
+
+      animation:
+        floating 4s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+
+      0%,
+      100% {
+
+        transform: translateY(0);
+      }
+
+      50% {
+
+        transform: translateY(-10px);
+      }
+    }
+
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration: 0.01ms !important;
+
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+
+  <header
+    id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 text-white transition-all duration-300"
+  >
+
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+      <div class="flex h-20 items-center justify-between">
+
+
+        <!-- LOGO -->
+
+        <a
+          href="#home"
+          class="flex items-center gap-3"
+        >
+
+          <div
+            class="
+              flex
+              h-11
+              w-11
+              items-center
+              justify-center
+              rounded-2xl
+              bg-yellow
+              text-chocolate
+              font-black
+              shadow-lg
+            "
+          >
+            M.4
+          </div>
+
+          <div>
+
+            <div
+              id="logo-name"
+              class="font-bold"
+            >
+              M.4
+            </div>
+
+            <div
+              class="text-[10px] tracking-[0.2em] opacity-70"
+            >
+              FUTURE M.4 student
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav
+          class="hidden items-center gap-8 md:flex"
+          aria-label="Main Navigation"
+        >
+
+          <a
+            href="#home"
+            class="nav-link font-medium transition hover:text-yellow"
+          >
+            Home
+          </a>
+
+          <a
+            href="#about"
+            class="nav-link font-medium transition hover:text-yellow"
+          >
+            About
+          </a>
+
+          <a
+            href="#skills"
+            class="nav-link font-medium transition hover:text-yellow"
+          >
+            Skills
+          </a>
+
+          <a
+            href="#projects"
+            class="nav-link font-medium transition hover:text-yellow"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#contact"
+            class="
+              rounded-full
+              bg-yellow
+              px-5
+              py-2.5
+              font-bold
+              text-chocolate
+              transition
+              hover:bg-yellow-light
+            "
+          >
+            Contact
+          </a>
+
+        </nav>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+          id="menuButton"
+          type="button"
+          aria-label="เปิดเมนู"
+          aria-expanded="false"
+          class="rounded-xl p-2 md:hidden"
+        >
+
+          <svg
+            id="menuIcon"
+            class="h-7 w-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+
+          </svg>
+
+
+          <svg
+            id="closeIcon"
+            class="hidden h-7 w-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+
+          </svg>
+
+        </button>
+
+      </div>
+
+
+      <!-- MOBILE MENU -->
+
+      <nav
+        id="mobileMenu"
+        class="
+          mobile-menu
+          rounded-2xl
+          bg-white
+          shadow-xl
+          md:hidden
+        "
+      >
+
+        <div class="p-4">
+
+          <a
+            href="#home"
+            class="mobile-link block rounded-xl px-4 py-3 font-semibold text-chocolate hover:bg-yellow-light"
+          >
+            Home
+          </a>
+
+          <a
+            href="#about"
+            class="mobile-link block rounded-xl px-4 py-3 font-semibold text-chocolate hover:bg-yellow-light"
+          >
+            About
+          </a>
+
+          <a
+            href="#skills"
+            class="mobile-link block rounded-xl px-4 py-3 font-semibold text-chocolate hover:bg-yellow-light"
+          >
+            Skills
+          </a>
+
+          <a
+            href="#projects"
+            class="mobile-link block rounded-xl px-4 py-3 font-semibold text-chocolate hover:bg-yellow-light"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#contact"
+            class="mobile-link mt-2 block rounded-xl bg-chocolate px-4 py-3 text-center font-bold text-yellow"
+          >
+            Contact
+          </a>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      id="home"
+      class="
+        relative
+        flex
+        min-h-screen
+        items-center
+        overflow-hidden
+        bg-yellow-pale
+      "
+    >
+
+      <!-- GRID -->
+
+      <div
+        class="
+          engineering-grid
+          absolute
+          inset-0
+          opacity-60
+        "
+      ></div>
+
+
+      <!-- PATTERN -->
+
+      <div
+        class="
+          hero-pattern
+          absolute
+          inset-0
+          opacity-30
+        "
+      ></div>
+
+
+      <!-- DECORATIVE CIRCLE -->
+
+      <div
+        class="
+          absolute
+          -right-32
+          -top-32
+          h-96
+          w-96
+          rounded-full
+          bg-yellow
+          opacity-40
+        "
+      ></div>
+
+
+      <div
+        class="
+          absolute
+          -bottom-40
+          -left-20
+          h-96
+          w-96
+          rounded-full
+          border-[60px]
+          border-white
+          opacity-60
+        "
+      ></div>
+
+
+      <!-- CONTENT -->
+
+      <div
+        class="
+          relative
+          z-10
+          mx-auto
+          grid
+          w-full
+          max-w-7xl
+          items-center
+          gap-14
+          px-5
+          pb-20
+          pt-32
+          sm:px-6
+          lg:grid-cols-2
+          lg:px-8
+        "
+      >
+
+
+        <!-- HERO TEXT -->
+
+        <div class="reveal">
+
+          <div
+            class="
+              mb-6
+              inline-flex
+              items-center
+              gap-3
+              rounded-full
+              border
+              border-chocolate/10
+              bg-white/70
+              px-4
+              py-2
+              text-xs
+              font-bold
+              tracking-widest
+              text-chocolate
+              shadow-sm
+              backdrop-blur
+            "
+          >
+
+            <span
+              class="
+                h-2.5
+                w-2.5
+                rounded-full
+                bg-yellow
+                ring-4
+                ring-yellow/20
+              "
+            ></span>
+
+            M.3 STUDENT • Future M.4 student
+
+          </div>
+
+
+          <h1
+            class="
+              max-w-3xl
+              text-5xl
+              font-black
+              leading-tight
+              text-chocolate
+              sm:text-6xl
+              lg:text-7xl
+            "
+          >
+
+            ด.ญ.นพภัสสร นาคแจ่ม
+
+          </h1>
+
+
+          <div
+            class="
+              mt-5
+              text-xl
+              font-bold
+              text-brown
+              sm:text-2xl
+            "
+          >
+
+            Building the Future
+
+          </div>
+
+
+          <div
+            class="
+              mt-2
+              text-base
+              font-medium
+              text-chocolate-light
+              sm:text-lg
+            "
+          >
+
+            ว่าที่นักเรียนชั้นมัธยมศึกษาปีที่ 4
+
+          </div>
+
+
+          <p
+            class="
+              mt-7
+              max-w-xl
+              text-base
+              leading-8
+              text-chocolate-light
+              sm:text-lg
+            "
+          >
+
+            นักเรียนชั้น ม.3 ผู้มีความสนใจด้านคณิตศาสตร์
+            วิทยาศาสตร์ การออกแบบโครงสร้าง และเทคโนโลยี
+            พร้อมเรียนรู้สิ่งใหม่ ๆ และพัฒนาตัวเอง
+            เพื่อก้าวไปสู่ระดับชั้นมัธยมศึกษาตอนปลาย
+
+          </p>
+
+
+          <!-- BUTTONS -->
+
+          <div
+            class="
+              mt-9
+              flex
+              flex-col
+              gap-3
+              sm:flex-row
+            "
+          >
+
+            <a
+              href="#projects"
+              class="
+                inline-flex
+                items-center
+                justify-center
+                gap-2
+                rounded-2xl
+                bg-chocolate
+                px-7
+                py-4
+                font-bold
+                text-yellow
+                shadow-chocolate
+                transition
+                hover:-translate-y-1
+                hover:bg-chocolate-dark
+              "
+            >
+
+              ดูผลงานของหนู
+
+              <span>↓</span>
+
+            </a>
+
+
+            <a
+              href="#about"
+              class="
+                inline-flex
+                items-center
+                justify-center
+                rounded-2xl
+                border-2
+                border-chocolate/10
+                bg-white/70
+                px-7
+                py-4
+                font-bold
+                text-chocolate
+                transition
+                hover:-translate-y-1
+                hover:border-yellow
+                hover:bg-yellow-light
+              "
+            >
+
+              รู้จักหนู
+
+            </a>
+
+          </div>
+
+
+          <!-- STATS -->
+
+          <div
+            class="
+              mt-12
+              grid
+              max-w-lg
+              grid-cols-3
+              gap-5
+              border-t
+              border-chocolate/10
+              pt-6
+            "
+          >
+
+            <div>
+
+              <div
+                class="
+                  text-2xl
+                  font-black
+                  text-chocolate
+                "
+              >
+                M.3
+              </div>
+
+              <div
+                class="
+                  mt-1
+                  text-xs
+                  text-chocolate-light
+                "
+              >
+                Current Level
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="
+                  text-2xl
+                  font-black
+                  text-chocolate
+                "
+              >
+                STEM
+              </div>
+
+              <div
+                class="
+                  mt-1
+                  text-xs
+                  text-chocolate-light
+                "
+              >
+                Interest
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <div
+                class="
+                  text-2xl
+                  font-black
+                  text-chocolate
+                "
+              >
+                10+
+              </div>
+
+              <div
+                class="
+                  mt-1
+                  text-xs
+                  text-chocolate-light
+                "
+              >
+                Projects
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- HERO IMAGE -->
+
+        <div
+          class="
+            relative
+            mx-auto
+            w-full
+            max-w-lg
+            reveal
+          "
+        >
+
+          <!-- BACK DECORATION -->
+
+          <div
+            class="
+              absolute
+              -right-5
+              -top-5
+              h-32
+              w-32
+              rounded-3xl
+              bg-yellow
+            "
+          ></div>
+
+
+          <!-- IMAGE CARD -->
+
+          <div
+            class="
+              relative
+              overflow-hidden
+              rounded-[2rem]
+              border-8
+              border-white
+              bg-white
+              shadow-chocolate
+            "
+          >
+
+            <img
+              src="https://placehold.co/800x1000/F6D77A/4A2C20?text=PROFILE+PHOTO"
+              alt="รูปโปรไฟล์ของ [ชื่อ-นามสกุล]"
+              class="
+                h-[500px]
+                w-full
+                object-cover
+                sm:h-[600px]
+              "
+            >
+
+
+            <!-- IMAGE OVERLAY -->
+
+            <div
+              class="
+                absolute
+                inset-x-5
+                bottom-5
+                rounded-2xl
+                bg-white/90
+                p-5
+                shadow-lg
+                backdrop-blur
+              "
+            >
+
+              <div
+                class="
+                  text-xs
+                  font-bold
+                  tracking-widest
+                  text-caramel
+                "
+              >
+                Future M.4 student
+              </div>
+
+              <div
+                class="
+                  mt-1
+                  text-lg
+                  font-black
+                  text-chocolate
+                "
+              >
+                Math • Science • Innovation
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FLOATING BADGE -->
+
+          <div
+            class="
+              float
+              absolute
+              -bottom-6
+              -left-5
+              hidden
+              rounded-2xl
+              bg-chocolate
+              px-5
+              py-4
+              text-yellow
+              shadow-xl
+              sm:block
+            "
+          >
+
+            <div
+              class="
+                text-[10px]
+                font-bold
+                tracking-widest
+                opacity-70
+              "
+            >
+              MY GOAL
+            </div>
+
+            <div class="mt-1 font-black">
+              Future PCSHS student
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+      id="about"
+      class="bg-white py-24 sm:py-28"
+    >
+
+      <div
+        class="
+          mx-auto
+          max-w-7xl
+          px-5
+          sm:px-6
+          lg:px-8
+        "
+      >
+
+        <!-- TITLE -->
+
+        <div
+          class="
+            mb-14
+            max-w-2xl
+            reveal
+          "
+        >
+
+          <div
+            class="
+              mb-3
+              text-sm
+              font-black
+              uppercase
+              tracking-[0.2em]
+              text-caramel
+            "
+          >
+            ABOUT ME
+          </div>
+
+          <h2
+            class="
+              text-3xl
+              font-black
+              text-chocolate
+              sm:text-4xl
+            "
+          >
+            รู้จักตัวตนของหนู
+          </h2>
+
+          <p
+            class="
+              mt-4
+              leading-8
+              text-chocolate-light
+            "
+          >
+           หนูเป็นคนยังไง
+          </p>
+
+        </div>
+
+
+        <div
+          class="
+            grid
+            items-center
+            gap-14
+            lg:grid-cols-2
+          "
+        >
+
+          <!-- IMAGE -->
+
+          <div class="relative reveal">
+
+            <div
+              class="
+                absolute
+                -left-4
+                -top-4
+                h-24
+                w-24
+                rounded-tl-3xl
+                border-l-4
+                border-t-4
+                border-yellow
+              "
+            ></div>
+
+            <div
+              class="
+                absolute
+                -bottom-4
+                -right-4
+                h-24
+                w-24
+                rounded-br-3xl
+                border-b-4
+                border-r-4
+                border-chocolate
+              "
+            ></div>
+
+
+            <div
+              class="
+                relative
+                overflow-hidden
+                rounded-3xl
+                bg-yellow-light
+                p-3
+              "
+            >
+
+              <img
+                src="https://placehold.co/900x700/FFF3BF/4A2C20?text=ABOUT+ME"
+                alt="ภาพแนะนำตัวของ [ชื่อ-นามสกุล]"
+                class="
+                  h-[400px]
+                  w-full
+                  rounded-2xl
+                  object-cover
+                  sm:h-[500px]
+                "
+                loading="lazy"
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- TEXT -->
+
+          <div class="reveal">
+
+            <div
+              class="
+                mb-5
+                inline-flex
+                items-center
+                gap-2
+                rounded-full
+                bg-yellow-light
+                px-4
+                py-2
+                text-sm
+                font-bold
+                text-chocolate
+              "
+            >
+              👋 สวัสดีค่ะ
+            </div>
+
+
+            <h3
+              class="
+                text-2xl
+                font-black
+                text-chocolate
+                sm:text-3xl
+              "
+            >
+              หนูคือ ด.ญ.นพภัสสร นาคแจ่ม
+            </h3>
+
+
+            <p
+              class="
+                mt-5
+                leading-8
+                text-chocolate-light
+              "
+            >
+
+              หนูเป็นนักเรียนชั้น ม.3
+              ที่มีความสนใจในด้านวิทยาศาสตร์ คณิตศาสตร์
+              และการออกแบบ โดยเฉพาะสิ่งที่เกี่ยวกับคณิตศาสตร์
+         
+
+            </p>
+
+
+            <p
+              class="
+                mt-4
+                leading-8
+                text-chocolate-light
+              "
+            >
+
+              ความสนใจนี้ทำให้หนูมีเป้าหมายที่จะศึกษาต่อ
+              ในโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย
+              เพื่อพัฒนาความรู้และทักษะ
+              
+
+            </p>
+
+
+            <!-- INFO CARDS -->
+
+            <div
+              class="
+                mt-8
+                grid
+                grid-cols-2
+                gap-3
+                sm:grid-cols-4
+              "
+            >
+
+              <div
+                class="
+                  rounded-2xl
+                  bg-yellow-pale
+                  p-4
+                "
+              >
+
+                <div class="text-xs text-brown">
+                  ระดับ
+                </div>
+
+                <div
+                  class="
+                    mt-1
+                    font-black
+                    text-chocolate
+                  "
+                >
+                  ม.3
+                </div>
+
+              </div>
+
+
+              <div
+                class="
+                  rounded-2xl
+                  bg-yellow-pale
+                  p-4
+                "
+              >
+
+                <div class="text-xs text-brown">
+                  Interest
+                </div>
+
+                <div
+                  class="
+                    mt-1
+                    font-black
+                    text-chocolate
+                  "
+                >
+                  Science Math English
+                </div>
+
+              </div>
+
+
+              <div
+                class="
+                  rounded-2xl
+                  bg-yellow-pale
+                  p-4
+                "
+              >
+
+                <div class="text-xs text-brown">
+                  Goal
+                </div>
+
+                <div
+                  class="
+                    mt-1
+                    font-black
+                    text-chocolate
+                  "
+                >
+                  PCSHS students
+                </div>
+
+              </div>
+
+
+              <div
+                class="
+                  rounded-2xl
+                  bg-yellow-pale
+                  p-4
+                "
+              >
+
+                <div class="text-xs text-brown">
+                  Focus
+                </div>
+
+                <div
+                  class="
+                    mt-1
+                    font-black
+                    text-chocolate
+                  "
+                >
+                  STEM
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
+    <section
+      id="skills"
+      class="bg-yellow-pale py-24 sm:py-28"
+    >
+
+      <div
+        class="
+          mx-auto
+          max-w-7xl
+          px-5
+          sm:px-6
+          lg:px-8
+        "
+      >
+
+        <div class="mb-14 text-center reveal">
+
+          <div
+            class="
+              mb-3
+              text-sm
+              font-black
+              uppercase
+              tracking-[0.2em]
+              text-caramel
+            "
+          >
+            SKILLS & ABILITIES
+          </div>
+
+          <h2
+            class="
+              text-3xl
+              font-black
+              text-chocolate
+              sm:text-4xl
+            "
+          >
+            ทักษะที่กำลังพัฒนา
+          </h2>
+
+          <p
+            class="
+              mx-auto
+              mt-4
+              max-w-2xl
+              leading-8
+              text-chocolate-light
+            "
+          >
+            ความรู้และทักษะที่ต้องการพัฒนา
+            เพื่อเตรียมความพร้อมสำหรับม.4
+          </p>
+
+        </div>
+
+
+        <div
+          class="
+            grid
+            gap-6
+            lg:grid-cols-3
+          "
+        >
+
+
+          <!-- ACADEMIC -->
+
+          <div
+            class="
+              reveal
+              rounded-3xl
+              border
+              border-yellow
+              bg-white
+              p-7
+              shadow-soft
+            "
+          >
+
+            <div
+              class="
+                mb-6
+                flex
+                h-14
+                w-14
+                items-center
+                justify-center
+                rounded-2xl
+                bg-yellow-light
+                text-2xl
+              "
+            >
+              📚
+            </div>
+
+            <h3
+              class="
+                text-xl
+                font-black
+                text-chocolate
+              "
+            >
+              Academic Skills
+            </h3>
+
+
+            <div class="mt-7 space-y-6">
+
+              <!-- MATH -->
+
+              <div>
+
+                <div
+                  class="
+                    mb-2
+                    flex
+                    justify-between
+                    text-sm
+                  "
+                >
+
+                  <span class="font-bold">
+                    Mathematics
+                  </span>
+
+                  <span class="text-brown">
+                    85%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-chocolate
+                    "
+                    style="width:85%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <!-- PHYSICS -->
+
+              <div>
+
+                <div
+                  class="
+                    mb-2
+                    flex
+                    justify-between
+                    text-sm
+                  "
+                >
+
+                  <span class="font-bold">
+                    Physics
+                  </span>
+
+                  <span class="text-brown">
+                    75%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-chocolate
+                    "
+                    style="width:75%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <!-- SCIENCE -->
+
+              <div>
+
+                <div
+                  class="
+                    mb-2
+                    flex
+                    justify-between
+                    text-sm
+                  "
+                >
+
+                  <span class="font-bold">
+                    Science
+                  </span>
+
+                  <span class="text-brown">
+                    80%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-chocolate
+                    "
+                    style="width:80%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <!-- ANALYTICAL -->
+
+              <div>
+
+                <div
+                  class="
+                    mb-2
+                    flex
+                    justify-between
+                    text-sm
+                  "
+                >
+
+                  <span class="font-bold">
+                    Analytical Thinking
+                  </span>
+
+                  <span class="text-brown">
+                    82%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-chocolate
+                    "
+                    style="width:82%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- TECHNICAL -->
+
+          <div
+            class="
+              reveal
+              rounded-3xl
+              border
+              border-yellow
+              bg-white
+              p-7
+              shadow-soft
+            "
+          >
+
+            <div
+              class="
+                mb-6
+                flex
+                h-14
+                w-14
+                items-center
+                justify-center
+                rounded-2xl
+                bg-yellow
+                text-2xl
+              "
+            >
+              🏗️
+            </div>
+
+            <h3
+              class="
+                text-xl
+                font-black
+                text-chocolate
+              "
+            >
+              Technical Skills
+            </h3>
+
+
+            <div class="mt-7 space-y-6">
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    AutoCAD
+                  </span>
+
+                  <span class="text-brown">
+                    65%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-caramel
+                    "
+                    style="width:65%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    SketchUp
+                  </span>
+
+                  <span class="text-brown">
+                    70%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-caramel
+                    "
+                    style="width:70%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    3D Design
+                  </span>
+
+                  <span class="text-brown">
+                    60%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-caramel
+                    "
+                    style="width:60%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    Engineering Drawing
+                  </span>
+
+                  <span class="text-brown">
+                    65%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-caramel
+                    "
+                    style="width:65%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- SOFT SKILLS -->
+
+          <div
+            class="
+              reveal
+              rounded-3xl
+              border
+              border-yellow
+              bg-white
+              p-7
+              shadow-soft
+            "
+          >
+
+            <div
+              class="
+                mb-6
+                flex
+                h-14
+                w-14
+                items-center
+                justify-center
+                rounded-2xl
+                bg-yellow-light
+                text-2xl
+              "
+            >
+              🤝
+            </div>
+
+            <h3
+              class="
+                text-xl
+                font-black
+                text-chocolate
+              "
+            >
+              Soft Skills
+            </h3>
+
+
+            <div class="mt-7 space-y-6">
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    Problem Solving
+                  </span>
+
+                  <span class="text-brown">
+                    90%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-yellow
+                    "
+                    style="width:90%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    Teamwork
+                  </span>
+
+                  <span class="text-brown">
+                    90%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-yellow
+                    "
+                    style="width:90%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    Communication
+                  </span>
+
+                  <span class="text-brown">
+                    80%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-yellow
+                    "
+                    style="width:80%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+
+              <div>
+
+                <div class="mb-2 flex justify-between text-sm">
+
+                  <span class="font-bold">
+                    Time Management
+                  </span>
+
+                  <span class="text-brown">
+                    82%
+                  </span>
+
+                </div>
+
+                <div
+                  class="
+                    h-2
+                    overflow-hidden
+                    rounded-full
+                    bg-beige
+                  "
+                >
+
+                  <div
+                    class="
+                      skill-bar
+                      h-full
+                      rounded-full
+                      bg-yellow
+                    "
+                    style="width:82%"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section
+      id="projects"
+      class="bg-white py-24 sm:py-28"
+    >
+
+      <div
+        class="
+          mx-auto
+          max-w-7xl
+          px-5
+          sm:px-6
+          lg:px-8
+        "
+      >
+
+        <!-- HEADER -->
+
+        <div
+          class="
+            mb-14
+            flex
+            flex-col
+            gap-5
+            md:flex-row
+            md:items-end
+            md:justify-between
+            reveal
+          "
+        >
+
+          <div>
+
+            <div
+              class="
+                mb-3
+                text-sm
+                font-black
+                uppercase
+                tracking-[0.2em]
+                text-caramel
+              "
+            >
+              PROJECTS & ACTIVITIES
+            </div>
+
+            <h2
+              class="
+                text-3xl
+                font-black
+                text-chocolate
+                sm:text-4xl
+              "
+            >
+              ผลงานและกิจกรรม
+            </h2>
+
+            <p
+              class="
+                mt-4
+                max-w-2xl
+                leading-8
+                text-chocolate-light
+              "
+            >
+              ผลงานตัวอย่างที่แสดงถึงความสนใจ
+              ด้าน STEM การออกแบบ การแก้ปัญหา
+              และการทำงานเป็นทีม
+            </p>
+
+          </div>
+
+
+          <div
+            class="
+              rounded-full
+              bg-yellow-light
+              px-5
+              py-2
+              text-sm
+              font-bold
+              text-chocolate
+            "
+          >
+
+            10 PROJECTS
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PROJECT GRID -->
+
+        <div
+          class="
+            grid
+            gap-6
+            sm:grid-cols-2
+            lg:grid-cols-3
+          "
+        >
+
+
+          <!-- PROJECT 01 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/FFF3BF/4A2C20?text=01+BRIDGE"
+                alt="โครงงานสะพานไม้ไอติม"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span
+                class="
+                  absolute
+                  left-4
+                  top-4
+                  rounded-full
+                  bg-chocolate
+                  px-3
+                  py-1
+                  text-xs
+                  font-black
+                  text-yellow
+                "
+              >
+                01
+              </span>
+
+            </div>
+
+
+            <div class="p-6">
+
+              <div
+                class="
+                  text-xs
+                  font-black
+                  uppercase
+                  tracking-widest
+                  text-caramel
+                "
+              >
+                STRUCTURE
+              </div>
+
+              <h3
+                class="
+                  mt-2
+                  text-xl
+                  font-black
+                  text-chocolate
+                "
+              >
+                โครงงานสะพานไม้ไอติม
+              </h3>
+
+              <p
+                class="
+                  mt-3
+                  text-sm
+                  leading-7
+                  text-chocolate-light
+                "
+              >
+                ศึกษาหลักการรับน้ำหนัก
+                และออกแบบโครงสร้างสะพานจากไม้ไอติม
+                พร้อมทดลองและปรับปรุงรูปแบบ
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span
+                  class="
+                    rounded-full
+                    bg-yellow-light
+                    px-3
+                    py-1
+                    text-xs
+                    font-bold
+                  "
+                >
+                  Design
+                </span>
+
+                <span
+                  class="
+                    rounded-full
+                    bg-yellow-light
+                    px-3
+                    py-1
+                    text-xs
+                    font-bold
+                  "
+                >
+                  Testing
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 02 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/F6D77A/4A2C20?text=02+STEM+CAMP"
+                alt="กิจกรรม STEM Engineering Camp"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span
+                class="
+                  absolute
+                  left-4
+                  top-4
+                  rounded-full
+                  bg-chocolate
+                  px-3
+                  py-1
+                  text-xs
+                  font-black
+                  text-yellow
+                "
+              >
+                02
+              </span>
+
+            </div>
+
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                ACTIVITY
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                STEM Engineering Camp
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                เข้าร่วมกิจกรรม STEM
+                และเรียนรู้กระบวนการคิดเชิงวิศวกรรม
+                ผ่านกิจกรรมการออกแบบและแก้ปัญหา
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  STEM
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Teamwork
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 03 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/E8D5B7/4A2C20?text=03+STRUCTURAL+DESIGN"
+                alt="การออกแบบโครงสร้างอาคาร"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span class="absolute left-4 top-4 rounded-full bg-chocolate px-3 py-1 text-xs font-black text-yellow">
+                03
+              </span>
+
+            </div>
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                DESIGN
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                Basic Structural Design
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                ทดลองออกแบบโครงสร้างอาคารเบื้องต้น
+                และศึกษาหลักการกระจายน้ำหนัก
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Structure
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Analysis
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 04 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/DDB892/4A2C20?text=04+SKETCHUP"
+                alt="การออกแบบบ้าน 3 มิติด้วย SketchUp"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span class="absolute left-4 top-4 rounded-full bg-chocolate px-3 py-1 text-xs font-black text-yellow">
+                04
+              </span>
+
+            </div>
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                3D DESIGN
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                SketchUp House Design
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                ออกแบบบ้าน 3 มิติด้วย SketchUp
+                โดยเน้นการจัดพื้นที่และองค์ประกอบพื้นฐาน
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  SketchUp
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  3D
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 05 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/C9A66B/4A2C20?text=05+AUTOCAD"
+                alt="การฝึกวาดแบบ AutoCAD"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span class="absolute left-4 top-4 rounded-full bg-chocolate px-3 py-1 text-xs font-black text-yellow">
+                05
+              </span>
+
+            </div>
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                TECHNICAL
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                AutoCAD Basic Drawing
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                ฝึกวาดแบบทางเทคนิค 2D
+                และเรียนรู้พื้นฐานการอ่านแบบ
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  AutoCAD
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Drawing
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 06 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/F9E7A8/4A2C20?text=06+MATH"
+                alt="กิจกรรมแก้โจทย์คณิตศาสตร์"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span class="absolute left-4 top-4 rounded-full bg-chocolate px-3 py-1 text-xs font-black text-yellow">
+                06
+              </span>
+
+            </div>
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                ACADEMIC
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                Mathematics Problem Solving
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                ฝึกแก้โจทย์คณิตศาสตร์ที่เน้นการวิเคราะห์
+                การวางแผน และการแก้ปัญหาอย่างเป็นขั้นตอน
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Math
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Logic
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 07 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/E8C98E/4A2C20?text=07+SCIENCE"
+                alt="โครงงานวิทยาศาสตร์"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span class="absolute left-4 top-4 rounded-full bg-chocolate px-3 py-1 text-xs font-black text-yellow">
+                07
+              </span>
+
+            </div>
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                SCIENCE
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                Science Project
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                ทำโครงงานวิทยาศาสตร์เพื่อฝึกการตั้งสมมติฐาน
+                ทดลอง เก็บข้อมูล และวิเคราะห์ผล
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Science
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Research
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 08 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/F3D58A/4A2C20?text=08+BRIDGE+CHALLENGE"
+                alt="กิจกรรมออกแบบสะพานจำลอง"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span class="absolute left-4 top-4 rounded-full bg-chocolate px-3 py-1 text-xs font-black text-yellow">
+                08
+              </span>
+
+            </div>
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                CHALLENGE
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                Bridge Design Challenge
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                ออกแบบสะพานจำลองโดยคำนึงถึงความแข็งแรง
+                น้ำหนัก และข้อจำกัดของวัสดุ
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Engineering
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Challenge
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 09 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-white
+            "
+          >
+
+            <div class="relative overflow-hidden">
+
+              <img
+                src="https://placehold.co/800x500/D6BFA5/4A2C20?text=09+TEAMWORK"
+                alt="กิจกรรมกลุ่มด้านวิศวกรรม"
+                class="h-56 w-full object-cover"
+                loading="lazy"
+              >
+
+              <span class="absolute left-4 top-4 rounded-full bg-chocolate px-3 py-1 text-xs font-black text-yellow">
+                09
+              </span>
+
+            </div>
+
+            <div class="p-6">
+
+              <div class="text-xs font-black uppercase tracking-widest text-caramel">
+                TEAMWORK
+              </div>
+
+              <h3 class="mt-2 text-xl font-black text-chocolate">
+                Team Engineering Activity
+              </h3>
+
+              <p class="mt-3 text-sm leading-7 text-chocolate-light">
+                กิจกรรมกลุ่มที่ต้องร่วมกันวางแผน
+                แบ่งหน้าที่ และแก้ปัญหาภายในเวลาที่กำหนด
+              </p>
+
+              <div class="mt-5 flex gap-2">
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Teamwork
+                </span>
+
+                <span class="rounded-full bg-yellow-light px-3 py-1 text-xs font-bold">
+                  Planning
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 10 -->
+
+          <article
+            class="
+              project-card
+              reveal
+              overflow-hidden
+              rounded-3xl
+              border
+              border-beige
+              bg-chocolate
+              text-white
+              sm:col-span-2
+              lg:col-span-3
+              lg:flex
+            "
+          >
+
+            <div
+              class="
+                relative
+                overflow-hidden
+                lg:w-2/5
+              "
+            >
+
+              <img
+                src="https://placehold.co/900x600/4A2C20/F6D77A?text=10+FUTURE+CIVIL+ENGINEER"
+                alt="โครงงาน Future Civil Engineer"
+                class="
+                  h-64
+                  w-full
+                  object-cover
+                  lg:h-full
+                "
+                loading="lazy"
+              >
+
+              <span
+                class="
+                  absolute
+                  left-4
+                  top-4
+                  rounded-full
+                  bg-yellow
+                  px-3
+                  py-1
+                  text-xs
+                  font-black
+                  text-chocolate
+                "
+              >
+                10
+              </span>
+
+            </div>
+
+
+            <div
+              class="
+                flex
+                flex-1
+                flex-col
+                justify-center
+                p-7
+                lg:p-10
+              "
+            >
+
+              <div
+                class="
+                  text-xs
+                  font-black
+                  uppercase
+                  tracking-widest
+                  text-yellow
+                "
+              >
+                PERSONAL PROJECT
+              </div>
+
+              <h3
+                class="
+                  mt-2
+                  text-2xl
+                  font-black
+                  sm:text-3xl
+                "
+              >
+                Future Civil Engineer
+              </h3>
+
+              <p
+                class="
+                  mt-4
+                  max-w-2xl
+                  leading-8
+                  text-white/70
+                "
+              >
+                โครงงานส่วนตัวที่รวบรวมความสนใจเกี่ยวกับวิศวกรรมโยธา
+                เป้าหมายในการเรียน
+                และทักษะที่ต้องการพัฒนาต่อไป
+              </p>
+
+
+              <div class="mt-6 flex flex-wrap gap-2">
+
+                <span
+                  class="
+                    rounded-full
+                    bg-yellow
+                    px-4
+                    py-2
+                    text-xs
+                    font-black
+                    text-chocolate
+                  "
+                >
+                  Civil Engineering
+                </span>
+
+                <span
+                  class="
+                    rounded-full
+                    bg-white/10
+                    px-4
+                    py-2
+                    text-xs
+                    font-bold
+                  "
+                >
+                  Future Goal
+                </span>
+
+                <span
+                  class="
+                    rounded-full
+                    bg-white/10
+                    px-4
+                    py-2
+                    text-xs
+                    font-bold
+                  "
+                >
+                  Learning Journey
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHY CIVIL ENGINEERING
+    ====================================================== -->
+
+    <section
+      class="
+        relative
+        overflow-hidden
+        bg-yellow
+        py-24
+      "
+    >
+
+      <div
+        class="
+          engineering-grid
+          absolute
+          inset-0
+          opacity-30
+        "
+      ></div>
+
+
+      <div
+        class="
+          relative
+          mx-auto
+          max-w-5xl
+          px-5
+          text-center
+          sm:px-6
+          lg:px-8
+        "
+      >
+
+        <div class="reveal">
+
+          <div
+            class="
+              text-sm
+              font-black
+              uppercase
+              tracking-[0.25em]
+              text-caramel
+            "
+          >
+            WHY CIVIL ENGINEERING?
+          </div>
+
+
+          <h2
+            class="
+              mt-4
+              text-3xl
+              font-black
+              text-chocolate
+              sm:text-5xl
+            "
+          >
+
+            STRUCTURE
+
+            <span class="text-white">
+              •
+            </span>
+
+            DESIGN
+
+            <span class="text-white">
+              •
+            </span>
+
+            INNOVATION
+
+          </h2>
+
+
+          <p
+            class="
+              mx-auto
+              mt-8
+              max-w-3xl
+              text-base
+              leading-8
+              text-chocolate-light
+              sm:text-lg
+            "
+          >
+
+            เพราะหนูเชื่อว่าจุฬาภรณ
+            ไม่ได้เป็นเพียงการสร้างอาคารหรือสะพาน
+            แต่คือการใช้ความรู้ทางคณิตศาสตร์ วิทยาศาสตร์
+            และการออกแบบ เพื่อสร้างสิ่งที่มีประโยชน์
+            และช่วยพัฒนาสังคม
+
+          </p>
+
+
+          <div
+            class="
+              mt-10
+              flex
+              flex-wrap
+              justify-center
+              gap-3
+            "
+          >
+
+            <span
+              class="
+                rounded-full
+                bg-white/70
+                px-5
+                py-2.5
+                text-sm
+                font-bold
+                text-chocolate
+              "
+            >
+              Mathematics
+            </span>
+
+            <span
+              class="
+                rounded-full
+                bg-white/70
+                px-5
+                py-2.5
+                text-sm
+                font-bold
+                text-chocolate
+              "
+            >
+              Science
+            </span>
+
+            <span
+              class="
+                rounded-full
+                bg-white/70
+                px-5
+                py-2.5
+                text-sm
+                font-bold
+                text-chocolate
+              "
+            >
+              Design
+            </span>
+
+            <span
+              class="
+                rounded-full
+                bg-white/70
+                px-5
+                py-2.5
+                text-sm
+                font-bold
+                text-chocolate
+              "
+            >
+              Problem Solving
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FUTURE GOAL
+    ====================================================== -->
+
+    <section class="bg-cream py-24">
+
+      <div
+        class="
+          mx-auto
+          max-w-6xl
+          px-5
+          sm:px-6
+          lg:px-8
+        "
+      >
+
+        <div
+          class="
+            grid
+            gap-12
+            lg:grid-cols-2
+          "
+        >
+
+
+          <!-- LEFT -->
+
+          <div class="reveal">
+
+            <div
+              class="
+                text-sm
+                font-black
+                uppercase
+                tracking-[0.2em]
+                text-caramel
+              "
+            >
+              MY DIRECTION
+            </div>
+
+
+            <h2
+              class="
+                mt-3
+                text-3xl
+                font-black
+                text-chocolate
+                sm:text-4xl
+              "
+            >
+              เส้นทางที่อยากเดินต่อ
+            </h2>
+
+
+            <p
+              class="
+                mt-5
+                leading-8
+                text-chocolate-light
+              "
+            >
+
+              เป้าหมายในช่วงต่อไปคือการเรียนรู้พื้นฐาน
+              ด้านวิทยาศาสตร์และคณิตศาสตร์
+              และพัฒนาทั้งทักษะด้านวิชาการและการลงมือปฏิบัติ
+              เพื่อเตรียมตัวเข้าสู่การเรียนในระดับที่สูงขึ้น
+
+            </p>
+
+
+            <div
+              class="
+                mt-8
+                rounded-3xl
+                bg-yellow-light
+                p-6
+              "
+            >
+
+              <div
+                class="
+                  text-3xl
+                "
+              >
+                🎯
+              </div>
+
+              <div
+                class="
+                  mt-3
+                  font-black
+                  text-chocolate
+                "
+              >
+                My Dream
+              </div>
+
+              <p
+                class="
+                  mt-2
+                  text-sm
+                  leading-7
+                  text-chocolate-light
+                "
+              >
+                เติบโตเป็นคนที่สามารถใช้ความรู้
+                ทางวิทยาศาสตร์ คณิตศาสตร์
+                ในการสร้างสิ่งดี ๆ ให้กับสังคม
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- RIGHT -->
+
+          <div class="reveal">
+
+            <div class="space-y-5">
+
+
+              <!-- STEP 1 -->
+
+              <div class="flex gap-5">
+
+                <div
+                  class="
+                    flex
+                    h-12
+                    w-12
+                    flex-shrink-0
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-chocolate
+                    font-black
+                    text-yellow
+                  "
+                >
+                  01
+                </div>
+
+                <div>
+
+                  <h3
+                    class="
+                      font-black
+                      text-chocolate
+                    "
+                  >
+                    ม.3 → ม.4
+                  </h3>
+
+                  <p
+                    class="
+                      mt-2
+                      text-sm
+                      leading-7
+                      text-chocolate-light
+                    "
+                  >
+                    เตรียมความพร้อมด้านคณิตศาสตร์
+                    วิทยาศาสตร์ และ STEM
+                    
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <!-- STEP 2 -->
+
+              <div class="flex gap-5">
+
+                <div
+                  class="
+                    flex
+                    h-12
+                    w-12
+                    flex-shrink-0
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-yellow
+                    font-black
+                    text-chocolate
+                  "
+                >
+                  02
+                </div>
+
+                <div>
+
+                  <h3
+                    class="
+                      font-black
+                      text-chocolate
+                    "
+                  >
+                    พัฒนาทักษะวิทย์และคณิต
+                  </h3>
+
+                  <p
+                    class="
+                      mt-2
+                      text-sm
+                      leading-7
+                      text-chocolate-light
+                    "
+                  >
+                    ฝึกการออกแบบ
+                    การเขียนแบบ
+                    การใช้เครื่องมือดิจิทัล
+                    และการแก้ปัญหาเชิงวิทยาศาสตร์
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <!-- STEP 3 -->
+
+              <div class="flex gap-5">
+
+                <div
+                  class="
+                    flex
+                    h-12
+                    w-12
+                    flex-shrink-0
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-chocolate
+                    font-black
+                    text-yellow
+                  "
+                >
+                  03
+                </div>
+
+                <div>
+
+                  <h3
+                    class="
+                      font-black
+                      text-chocolate
+                    "
+                  >
+                    Future M.4 students
+                  </h3>
+
+                  <p
+                    class="
+                      mt-2
+                      text-sm
+                      leading-7
+                      text-chocolate-light
+                    "
+                  >
+                    นำความรู้ไปต่อยอดสู่การเรียน
+                    ด้านคณิตศาสตร์และวิทยาศาสตร์
+                    และสร้างผลงานที่มีประโยชน์ต่อสังคม
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      id="contact"
+      class="
+        relative
+        overflow-hidden
+        bg-chocolate
+        py-24
+        text-white
+      "
+    >
+
+      <div
+        class="
+          engineering-grid
+          absolute
+          inset-0
+          opacity-10
+        "
+      ></div>
+
+
+      <div
+        class="
+          relative
+          mx-auto
+          max-w-7xl
+          px-5
+          sm:px-6
+          lg:px-8
+        "
+      >
+
+        <div
+          class="
+            grid
+            gap-12
+            lg:grid-cols-2
+          "
+        >
+
+
+          <!-- CONTACT TEXT -->
+
+          <div class="reveal">
+
+            <div
+              class="
+                text-sm
+                font-black
+                uppercase
+                tracking-[0.2em]
+                text-yellow
+              "
+            >
+              CONTACT
+            </div>
+
+
+            <h2
+              class="
+                mt-4
+                text-4xl
+                font-black
+                leading-tight
+                sm:text-5xl
+              "
+            >
+
+              Let's Build
+
+              <span class="text-yellow">
+                the Future.
+              </span>
+
+            </h2>
+
+
+            <p
+              class="
+                mt-6
+                max-w-xl
+                leading-8
+                text-white/65
+              "
+            >
+
+              หากต้องการรู้จักผลงาน
+              และเส้นทางการเรียนรู้ของหนูเพิ่มเติม
+              สามารถติดต่อได้ตามช่องทางด้านล่าง
+
+            </p>
+
+
+            <a
+              href="mailto:[your-email@example.com]"
+              class="
+                mt-8
+                inline-flex
+                items-center
+                gap-3
+                rounded-2xl
+                bg-yellow
+                px-6
+                py-4
+                font-black
+                text-chocolate
+                transition
+                hover:-translate-y-1
+                hover:bg-yellow-light
+              "
+            >
+
+              ✉
+
+              Email Me
+
+            </a>
+
+          </div>
+
+
+
+          <!-- CONTACT CARDS -->
+
+          <div
+            class="
+              grid
+              gap-4
+              sm:grid-cols-2
+              reveal
+            "
+          >
+
+
+            <!-- EMAIL -->
+
+            <div
+              class="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                p-6
+                backdrop-blur
+              "
+            >
+
+              <div
+                class="
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-yellow
+                  text-xl
+                "
+              >
+                ✉
+              </div>
+
+              <div
+                class="
+                  mt-5
+                  text-xs
+                  uppercase
+                  tracking-widest
+                  text-white/40
+                "
+              >
+                EMAIL
+              </div>
+
+              <a
+                href="mailto:[your-email@example.com]"
+                class="
+                  mt-2
+                  block
+                  break-all
+                  font-bold
+                  text-yellow
+                "
+              >
+                [your-email@example.com]
+              </a>
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div
+              class="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                p-6
+                backdrop-blur
+              "
+            >
+
+              <div
+                class="
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-yellow
+                  text-xl
+                "
+              >
+                ☎
+              </div>
+
+              <div
+                class="
+                  mt-5
+                  text-xs
+                  uppercase
+                  tracking-widest
+                  text-white/40
+                "
+              >
+                PHONE
+              </div>
+
+              <a
+                href="tel:[08X-XXX-XXXX]"
+                class="
+                  mt-2
+                  block
+                  font-bold
+                  text-yellow
+                "
+              >
+                [08X-XXX-XXXX]
+              </a>
+
+            </div>
+
+
+            <!-- GITHUB -->
+
+            <div
+              class="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                p-6
+                backdrop-blur
+              "
+            >
+
+              <div
+                class="
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-yellow
+                  font-black
+                  text-chocolate
+                "
+              >
+                GH
+              </div>
+
+              <div
+                class="
+                  mt-5
+                  text-xs
+                  uppercase
+                  tracking-widest
+                  text-white/40
+                "
+              >
+                GITHUB
+              </div>
+
+              <a
+                href="[GitHub URL]"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="
+                  mt-2
+                  block
+                  font-bold
+                  text-yellow
+                "
+              >
+                [GitHub Profile]
+              </a>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div
+              class="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                p-6
+                backdrop-blur
+              "
+            >
+
+              <div
+                class="
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-yellow
+                  font-black
+                  text-chocolate
+                "
+              >
+                IG
+              </div>
+
+              <div
+                class="
+                  mt-5
+                  text-xs
+                  uppercase
+                  tracking-widest
+                  text-white/40
+                "
+              >
+                INSTAGRAM
+              </div>
+
+              <a
+                href="[Instagram URL]"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="
+                  mt-2
+                  block
+                  font-bold
+                  text-yellow
+                "
+              >
+                [Instagram Profile]
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer
+    class="
+      border-t
+      border-white/10
+      bg-chocolate-dark
+      text-white/50
+    "
+  >
+
+    <div
+      class="
+        mx-auto
+        flex
+        max-w-7xl
+        flex-col
+        gap-3
+        px-5
+        py-8
+        text-center
+        text-sm
+        sm:px-6
+        md:flex-row
+        md:items-center
+        md:justify-between
+        md:text-left
+        lg:px-8
+      "
+    >
+
+      <div>
+
+        © 2026
+
+        <span class="font-bold text-yellow">
+          [ชื่อ-นามสกุล]
+        </span>
+
+        — Future Civil Engineer
+
+      </div>
+
+
+      <div class="text-xs">
+
+        Built with HTML • Tailwind CSS • JavaScript
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+
+    // ============================================
+    // MOBILE MENU
+    // ============================================
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    const menuIcon =
+      document.getElementById("menuIcon");
+
+    const closeIcon =
+      document.getElementById("closeIcon");
+
+    const mobileLinks =
+      document.querySelectorAll(".mobile-link");
+
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          mobileMenu.classList.toggle("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen
+            ? "ปิดเมนู"
+            : "เปิดเมนู"
+        );
+
+        menuIcon.classList.toggle(
+          "hidden",
+          isOpen
+        );
+
+        closeIcon.classList.toggle(
+          "hidden",
+          !isOpen
+        );
+
+      }
+    );
+
+
+    // ปิด Mobile Menu หลังจากคลิกลิงก์
+
+    mobileLinks.forEach(
+      (link) => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            mobileMenu.classList.remove(
+              "open"
+            );
+
+            menuIcon.classList.remove(
+              "hidden"
+            );
+
+            closeIcon.classList.add(
+              "hidden"
+            );
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+
+    // ============================================
+    // NAVBAR EFFECT
+    // ============================================
+
+    const navbar =
+      document.getElementById("navbar");
+
+    const navLinks =
+      document.querySelectorAll(".nav-link");
+
+
+    function updateNavbar() {
+
+      if (window.scrollY > 50) {
+
+        navbar.classList.add(
+          "navbar-scrolled"
+        );
+
+        navbar.classList.remove(
+          "text-white"
+        );
+
+        navLinks.forEach(
+          (link) => {
+
+            link.classList.remove(
+              "text-white"
+            );
+
+            link.classList.add(
+              "text-chocolate"
+            );
+
+          }
+        );
+
+      } else {
+
+        navbar.classList.remove(
+          "navbar-scrolled"
+        );
+
+        navbar.classList.add(
+          "text-white"
+        );
+
+        navLinks.forEach(
+          (link) => {
+
+            link.classList.add(
+              "text-white"
+            );
+
+            link.classList.remove(
+              "text-chocolate"
+            );
+
+          }
+        );
+
+      }
+
+    }
+
+
+    window.addEventListener(
+      "scroll",
+      updateNavbar
+    );
+
+    updateNavbar();
+
+
+
+    // ============================================
+    // SCROLL REVEAL
+    // ============================================
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        (entries, observer) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "active"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(
+      (element) => {
+
+        revealObserver.observe(
+          element
+        );
+
+      }
+    );
+
+
+
+    // ============================================
+    // SKILL BAR ANIMATION
+    // ============================================
+
+    const skillBars =
+      document.querySelectorAll(
+        ".skill-bar"
+      );
+
+
+    const skillObserver =
+      new IntersectionObserver(
+        (entries, observer) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "active"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: 0.5
+        }
+      );
+
+
+    skillBars.forEach(
+      (bar) => {
+
+        skillObserver.observe(
+          bar
+        );
+
+      }
+    );
+
+
+
+    // ============================================
+    // ESC KEY
+    // ปิดเมนูด้วยปุ่ม ESC
+    // ============================================
+
+    document.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (
+          event.key === "Escape" &&
+          mobileMenu.classList.contains(
+            "open"
+          )
+        ) {
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+          menuIcon.classList.remove(
+            "hidden"
+          );
+
+          closeIcon.classList.add(
+            "hidden"
+          );
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
